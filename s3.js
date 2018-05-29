@@ -15,7 +15,7 @@ limitations under the License.
 **/
 var express = require("express"),
     app     = express(),
-    port    = 3000;
+    port    = 9999;
 
 //CORS middleware
 var allowCrossDomain = function(req, res, next) {
@@ -31,4 +31,4 @@ var allowCrossDomain = function(req, res, next) {
     app.use(express.static(__dirname));
 // });
 
-app.listen(port);
+app.listen(process.env.PORT || port);
